@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registraion</title>
+</head>
+<body>
+    <h1>Thanks for Filling the Form</h1>
+    <a href="./form.html">Go back</a>
+    <div id="results">
+       <strong>Entered Data : </strong><br><br>
+    </div>
+</body>
+<script>
+    const resultList = document.getElementById("results");
+    // console.log('runs',resultList);
+    new URLSearchParams(window.location.search).forEach((value,name)=>{
+        resultList.append(name + ':' + value);
+        resultList.append(document.createElement('br'));
+    })
+</script>
+ 
+
+</html>
